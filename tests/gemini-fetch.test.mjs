@@ -1,0 +1,3 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {geminiFetch} from '../src/lib/gemini-fetch.ts';
+test('retries a temporary model failure once',async()=>{let calls=0;const r=await geminiFetch(async()=>new Response('',{status:++calls===1?503:200}),'https://example.test',{});assert.equal(r.status,200);assert.equal(calls,2);});
+test('does not retry invalid keys or repeatedly retry an unavailable model',async()=>{for(const status of [400,403,503]){let calls=0;const r=await geminiFetch(async()=>{calls++;return new Response('',{status});},'https://example.test',{});assert.equal(r.status,status);assert.equal(calls,status===503?2:1);}});

@@ -1,0 +1,6 @@
+﻿export type Entitlement={plan:'free'|'plus';used:number;remaining:number|null;allowed:boolean;resetsAt:string};
+export function parseEntitlement(v:unknown):Entitlement{if(!v||typeof v!=='object')throw new Error('Usage information is unavailable.');const p=v as Record<string,unknown>;if(!['free','plus'].includes(String(p.plan))||typeof p.used!=='number'||p.used<0||typeof p.allowed!=='boolean'||typeof p.resetsAt!=='string'||!Number.isFinite(Date.parse(p.resetsAt))||(p.plan==='free'&&(typeof p.remaining!=='number'||p.remaining<0||p.remaining>50))||(p.plan==='plus'&&p.remaining!==null))throw new Error('Invalid entitlement response.');return p as Entitlement;}
+export type BillingPrice={amountMinor:number;currency:string;period:'month'|'year';renewalTerms:string;cancellationTerms:string;sandbox:boolean};
+export interface PaymentProvider {price:()=>Promise<BillingPrice>;checkout:(userId:string)=>Promise<{url:string}>;verifyWebhook:(body:string,signature:string)=>Promise<{userId:string;activeUntil:string;plan:'free'|'plus'}>;}
+// Intentionally disabled until a provider, agreed price and verified webhook handler are implemented.
+export function paymentProvider():PaymentProvider|null{return null;}

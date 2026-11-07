@@ -1,0 +1,37 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 900" fill="none">
+<defs>
+ <radialGradient id="tom"><stop stop-color="#ef8760"/><stop offset=".7" stop-color="#d84c2e"/><stop offset="1" stop-color="#b63823"/></radialGradient>
+ <linearGradient id="leaf" x2="1" y2="1"><stop stop-color="#acc05c"/><stop offset=".5" stop-color="#6f983e"/><stop offset="1" stop-color="#3c622c"/></linearGradient>
+ <radialGradient id="sauce"><stop stop-color="#e6a052"/><stop offset="1" stop-color="#bd5930"/></radialGradient>
+ <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="1" dy="5" stdDeviation="5" flood-color="#74472c" flood-opacity=".16"/></filter>
+ <g id="tomato"><circle r="43" fill="url(#tom)"/><circle r="34" stroke="#f9ac77" stroke-width="3"/><path d="M0-30 5-8 26-17 11 2 28 16 7 11 0 31-7 10-28 16-12 0-27-17-6-9Z" fill="#f6b57d"/><g fill="#ffe0a3"><ellipse cx="13" cy="-18" rx="3" ry="5" transform="rotate(35 13 -18)"/><ellipse cx="-15" cy="-17" rx="3" ry="5" transform="rotate(-35 -15 -17)"/><ellipse cx="-20" cy="7" rx="3" ry="5"/><ellipse cx="18" cy="9" rx="3" ry="5"/><ellipse cx="0" cy="20" rx="3" ry="5"/></g></g>
+ <g id="basil"><path d="M0 0C-53-13-58-65-29-90 10-86 31-42 0 0Z" fill="url(#leaf)"/><path d="M0-2-27-78M-10-30-34-36M-17-50 0-64M-22-65-39-64" stroke="#d3d88b" stroke-width="1.5" opacity=".7"/></g>
+ <g id="pasta"><rect width="32" height="15" rx="4" fill="#e7af57"/><path d="M4 3H28M4 7H28M4 11H28" stroke="#f9d590" stroke-width="2"/><path d="m1 1 4 13M27 1l4 13" stroke="#c28b3b" stroke-width="2"/></g>
+ <g id="bowl"><circle r="104" fill="#ede1c7"/><circle r="96" fill="#fdf1d2"/><circle r="86" fill="url(#sauce)"/><g stroke="#f6ce7b" stroke-width="5" stroke-linecap="round"><path d="M-66-20Q-20-68 30-36T58 20Q28 51-28 20T-45 57M-60 7Q-20-25 22-7T54 42M-30-65Q-5-30 35-55M-60 40Q-10 80 42 51M-48-46Q-11 6 46-30M-14-73Q68-23 25 67M-69-3Q-7 36-21 68"/></g><g fill="#b94526"><circle cx="-35" cy="-28" r="10"/><circle cx="37" cy="22" r="12"/><circle cx="-4" cy="49" r="9"/></g><g fill="#487239"><path d="M-15-16q-25-27-5-33 26 13 5 33M25 0q-3-31 20-23 3 23-20 23M-42 40q-29-3-18-23 23 0 18 23"/></g></g>
+ <g id="pepper"><circle r="3" fill="#69503c"/><circle cx="-1" cy="-1" r="1" fill="#b69a74"/></g>
+</defs>
+<g filter="url(#shadow)">
+ <use href="#tomato" transform="translate(62 100) rotate(-20)"/>
+ <use href="#basil" transform="translate(270 121) rotate(-40) scale(.85)"/>
+ <use href="#basil" transform="translate(287 151) rotate(18) scale(.55)"/>
+ <use href="#bowl" transform="translate(441 18) rotate(15)"/>
+ <use href="#tomato" transform="translate(421 217) rotate(26) scale(.82)"/>
+ <use href="#basil" transform="translate(441 383) rotate(-30) scale(1.1)"/>
+ <use href="#basil" transform="translate(447 432) rotate(25) scale(.8)"/>
+ <use href="#bowl" transform="translate(468 662) rotate(20) scale(1.05)"/>
+ <use href="#tomato" transform="translate(-12 461) rotate(-15) scale(.8)"/>
+ <use href="#basil" transform="translate(8 466) rotate(45) scale(.72)"/>
+ <use href="#basil" transform="translate(16 404) rotate(-5) scale(.65)"/>
+ <use href="#basil" transform="translate(37 802) rotate(32)"/>
+ <use href="#basil" transform="translate(48 745) rotate(85) scale(.76)"/>
+ <use href="#basil" transform="translate(30 780) rotate(-30) scale(.7)"/>
+ <path d="M-21 590q14-49 48-20l27 39q-32 51-67 21Z" fill="#dda653"/><path d="m0 580 30 39m-40-18 35 37m-7-65 29 34" stroke="#f5c77c" stroke-width="10" stroke-linecap="round"/>
+ <use href="#pasta" transform="translate(112 46) rotate(23) scale(.6)"/>
+ <use href="#pasta" transform="translate(375 426) rotate(45) scale(.7)"/>
+ <use href="#pasta" transform="translate(99 687) rotate(35) scale(.65)"/>
+ <path d="M-15 187q44-9 59 57l-16 12q-59-40-43-69Z" fill="#f7edda"/><path d="M-8 196q29 0 39 44l-7 4q-36-29-32-48Z" fill="#59432f"/>
+</g>
+<g fill="#d99a4a"><circle cx="123" cy="147" r="4"/><circle cx="315" cy="184" r="4"/><circle cx="353" cy="320" r="3"/><circle cx="76" cy="344" r="4"/><circle cx="359" cy="529" r="3"/><circle cx="109" cy="769" r="4"/><circle cx="391" cy="818" r="4"/></g>
+<g><use href="#pepper" x="150" y="81"/><use href="#pepper" x="335" y="115"/><use href="#pepper" x="368" y="283"/><use href="#pepper" x="78" y="265"/><use href="#pepper" x="52" y="525"/><use href="#pepper" x="369" y="742"/><use href="#pepper" x="347" y="778"/><use href="#pepper" x="74" y="829"/></g>
+<g stroke="#d8b790" stroke-width="2" stroke-linecap="round"><path d="m151 115 6 4m-17 7 2 5m191 117 5 2m-4 8 4 3m-248 409 5-3m13 9 6 2m246 32 6 4"/></g>
+</svg>

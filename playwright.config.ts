@@ -1,0 +1,3 @@
+﻿import {defineConfig,devices} from '@playwright/test';
+const live=process.env.E2E_LIVE==='1';
+export default defineConfig({testDir:'./e2e',...(live?{testMatch:'**/live-auth.spec.ts'}:{}),fullyParallel:false,timeout:30000,use:{baseURL:'http://localhost:3000',trace:'retain-on-failure',...devices['iPhone 13'],defaultBrowserType:'chromium'},webServer:{command:'node node_modules/next/dist/bin/next dev --port 3000',url:'http://localhost:3000',reuseExistingServer:false,timeout:120000,...(!live?{env:{NEXT_PUBLIC_SUPABASE_URL:'',NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY:'',GEMINI_API_KEY:''}}:{})},reporter:'list'});
